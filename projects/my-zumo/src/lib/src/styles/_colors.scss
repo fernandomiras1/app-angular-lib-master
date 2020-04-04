@@ -1,0 +1,71 @@
+
+// Primary
+// Primary brand color and variations.
+$brand-main: #FE5000;
+$brand-main-80: #FE7333;
+$brand-main-60: #FE9666;
+$brand-main-40: #FFB999;
+$brand-main-20: #FFDCCC;
+$brand-main-10: #FEEDE5;
+$brand-main-04: #FFF8F5;
+
+// Secondary
+// Escorts and compliments the brand color.
+$brand-secondary-gold: #FF9E18;
+$brand-secondary-pink: #E74F3D;
+$brand-secondary-red: #E1251B;
+$brand-secondary-burgundy: #96262C;
+$brand-secondary-sand: #F0EBE6;
+
+// Feedback
+// Reserved to give UI feedback information.
+$ui-feedback-success: #037756; // deprecated
+$ui-feedback-success-dark: #037756;
+$ui-feedback-success-mid: #00A67A;
+$ui-feedback-success-light: #E6F9F3;
+$ui-feedback-error: #AF0000; // deprecated
+$ui-feedback-error-dark: #AF0000;
+$ui-feedback-error-mid: #D10000;
+$ui-feedback-error-ligth: #FBE5E5;
+$ui-feedback-warning: #996800; // deprecated
+$ui-feedback-warning-dark: #996800;
+$ui-feedback-warning-mid: #FFBB19;
+$ui-feedback-warning-ligth: #FFF6E5;
+
+// Illustrations
+// Series of colors to be used in illustrations.
+$illustrations-red: #F96D6D;
+$illustrations-yellow: #FECF65;
+$illustrations-sky-blue: #53B5FD;
+$illustrations-blue: #5063FB;
+$illustrations-violet: #9A51E5;
+$illustrations-green: #63DBAA;
+$illustrations-steel: #B6C4CF;
+$illustrations-night-blue: #333B73;
+$illustrations-light-red: #FAAFAF;
+$illustrations-light-yellow: #FFECC2;
+$illustrations-light-sky-blue: #BBE2FF;
+$illustrations-light-blue: #B9C1FE;
+$illustrations-light-violet: #D8B3FF;
+$illustrations-light-green: #ADF0D5;
+$illustrations-light-steel: #DBEDFA;
+$illustrations-light-night-blue: #CFD5FF;
+
+// Interface
+// Grayscale values to be used on user interfaces.
+$ui-grayscale-black: #000000;
+$ui-grayscale-black-80: #333333;
+$ui-grayscale-black-60: #666666;
+$ui-grayscale-black-40: #767676;
+$ui-grayscale-black-33: #AAAAAA;
+$ui-grayscale-black-30: #BBBBBB;
+$ui-grayscale-black-20: #CCCCCC;
+$ui-grayscale-black-10: #E3E3E3;
+$ui-grayscale-black-6: #EEEEEE;
+$ui-grayscale-black-3: #F7F7F7;
+$ui-grayscale-black-2: #FAFAFA;
+$ui-grayscale-white: #FFFFFF;
+
+// Sole Use
+// Colors reserved to be used for specific scenarios.
+$sole-promos: #0085CA;

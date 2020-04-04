@@ -1,0 +1,1199 @@
+@import "colors";
+@import "spaces";
+@import "typography";
+@import "iconsFont";
+
+$prefix: "z-";
+
+/**
+  * @name Checkboxes
+  *
+  * @markup
+  *   <label class="z-chbx">
+  *     <input type="checkbox"/>
+  *     <span>Some text</span>
+  *   </label>
+  **/
+
+.#{$prefix}chbx {
+  color: $ui-grayscale-black-80;
+  display: inline-block;
+  float: none;
+  font-family: $text-font-stack;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin: 0 0 $space-8 0;
+  position: relative;
+
+  span {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: $space-32;
+  }
+
+  input {
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+
+    &::after {
+      border: solid white 1px;
+      border-width: 0 2.3px 2.3px 0;
+      bottom: $space-4;
+      content: "";
+      cursor: pointer;
+      display: block;
+      height: 13px;
+      left: 8px;
+      opacity: 0;
+      position: absolute;
+      top: -1px;
+      transform: rotate(45deg);
+      transition: 0.15s ease-in-out;
+      width: 5px;
+    }
+
+    &::before {
+      border: solid $ui-grayscale-black-80 $space-2;
+      border-radius: $space-2;
+      box-sizing: border-box;
+      content: "";
+      cursor: pointer;
+      display: inline-block;
+      height: 18px;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.15s ease-in-out;
+      vertical-align: middle;
+      width: 18px;
+    }
+
+    &:checked,
+    &[checked="checked"] {
+
+      &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        background-color: $brand-main;
+        border: solid $brand-main $space-2;
+      }
+    }
+  }
+}
+
+/**
+* @name Disabled Checkboxes
+*
+* @markup
+*   <label class="z-chbx">
+*     <input type="checkbox" disabled/>
+*     <span></span>
+*   </label>
+*
+**/
+
+.#{$prefix}chbx > input:disabled {
+  cursor: not-allowed;
+
+  &::after,
+  &::before {
+    border: $space-2 solid $ui-grayscale-black-10;
+    cursor: not-allowed;
+  }
+
+  ~ span {
+    color: $ui-grayscale-black-30;
+    cursor: not-allowed;
+  }
+}
+
+/**
+  * @name Sliders
+  * @description Range control
+  *
+  * @markup
+  *   <input type="range" class="z-slider" />
+  *
+  **/
+
+@mixin rangeThumb {
+  background: $brand-main;
+  border: 0 !important;
+  border-radius: 50%;
+  height: 18px;
+  margin: -8px 0 0;
+  width: 18px;
+}
+
+@mixin rangeTrack {
+  background: $brand-main-40;
+  border: 0 solid $ui-grayscale-black;
+  height: 2px;
+  width: 100%;
+}
+
+@mixin rangeCircle {
+  appearance: none;
+  background: $brand-main;
+  border-radius: 50%;
+  height: 20px;
+  margin: -10px 0 0 0;
+  width: 20px;
+
+  @supports (-ms-ime-align:auto) {
+    margin: 0;
+  }
+}
+
+input[type=range],
+.#{$prefix}slider {
+
+  appearance: none;
+  background-color: transparent;
+  height: 20px;
+  margin: 9.5px 0;
+  width: 100%;
+
+  &:focus {
+    background: none;
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+
+    @include rangeTrack();
+  }
+
+  &::-webkit-slider-thumb {
+
+    @include rangeCircle();
+    cursor: pointer;
+
+    :disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &::-moz-range-track {
+    background: $brand-main-40;
+  }
+
+  &::-moz-range-thumb {
+
+    @include rangeCircle();
+    border: none;
+    cursor: pointer;
+  }
+
+  &::-ms-track {
+    background: $brand-main-40;
+    border: none;
+    color: transparent;
+  }
+
+  &::-ms-thumb {
+
+    @include rangeCircle();
+    border: none;
+    margin: 0 4px 0;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+  &::-ms-fill-lower {
+    background: $brand-main;
+    border-radius: 4px;
+  }
+}
+
+/**
+  * @name Radiobuttons
+  *
+  * @markup
+  *   <label class="z-radio">
+  *     <input type="radio"/>
+  *     <span> Some text </span>
+  *   </label>
+  **/
+
+.#{$prefix}radio {
+  display: inline-block;
+  float: none;
+  font-family: $text-font-stack;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin: 0 0 $space-8 0;
+  position: relative;
+
+  span {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: $space-32;
+  }
+
+  input {
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+
+    &::before {
+      border: solid $ui-grayscale-black-80 $space-2;
+      border-radius: $space-16;
+      box-sizing: border-box;
+      content: "";
+      cursor: pointer;
+      // display: inline-block;
+      height: 20px;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      top: -1px;
+      transition: 0.15s ease-in-out;
+      vertical-align: middle;
+      width: 20px;
+    }
+
+    &:checked,
+    &[checked="checked"] {
+
+      &::before {
+        border: solid $brand-main 6px;
+      }
+    }
+  }
+
+}
+
+/**
+* @name Disabled Radiobuttons
+*
+* @markup
+*   <label class="z-radio">
+*     <input type="radio" disabled/>
+*     <span></span>
+*   </label>
+*
+**/
+
+.#{$prefix}radio > input:disabled {
+  cursor: not-allowed;
+
+  &::before {
+    border: $space-2 solid $ui-grayscale-black-10;
+    cursor: not-allowed;
+  }
+
+  ~ span {
+    color: $ui-grayscale-black-30;
+    cursor: not-allowed;
+  }
+}
+
+/**
+* @name Select
+* @markup
+* <div class="z-select">
+*    <select class="select-box">
+*      <option hidden>Placeholder</option>
+*      <option>Ejemplo 1</option>
+*      <option>Ejemplo 2</option>
+*     </select>
+*     <i class="icon-angle-down size-16"></i>
+*  </div>
+*
+**/
+
+.#{$prefix}select {
+  position: relative;
+  width: 336px;
+
+  &::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    z-index: 0;
+  }
+
+  &:focus-within {
+
+    .icon-select {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
+.select-box {
+  appearance: none;
+  background-color: $ui-grayscale-white;
+  border: 0;
+  border-bottom: 1px solid $ui-grayscale-black-30;
+  color: $ui-grayscale-black-80;
+  cursor: pointer;
+  display: block;
+  font-family: $text-font-stack;
+  font-size: 16px;
+  margin: 0;
+  outline: none;
+  padding-bottom: 5px;
+  position: relative;
+  width: 336px;
+
+  &:focus {
+    border-bottom: 2px solid $ui-grayscale-black-80;
+  }
+}
+
+.icon-select {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+  z-index: 1;
+}
+
+option {
+  color: $ui-grayscale-black-80;
+}
+
+.select-box::-ms-expand {
+  display: none;
+}
+
+/**
+* @name Select disabled
+* @markup
+* <div class="z-select">
+*    <select class="select-box" disabled>
+*      <option hidden>Placeholder</option>
+*      <option>Ejemplo 1</option>
+*      <option>Ejemplo 2</option>
+*     </select>
+*     <i class="icon-angle-down size-16"></i>
+*  </div>
+*
+**/
+
+.select-box {
+
+  &:disabled {
+    border-bottom: 1px dashed $ui-grayscale-black-30;
+    color: $ui-grayscale-black-10;
+    cursor: not-allowed;
+
+    + .icon-select {
+      color: $ui-grayscale-black-10;
+    }
+  }
+}
+
+/**
+* @name Button Primary
+* @markup
+* <button class="z-button-primary ripple-white">Boton</button>
+**/
+
+.z-button-primary {
+  align-items: center;
+  background-color: $brand-main;
+  border: none;
+  border-radius: 60px;
+  box-shadow: none;
+  color: $ui-grayscale-white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $primary-font-stack, helvetica, arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.1px;
+  line-height: 2.67;
+  min-width: 136px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+  vertical-align: top;
+
+  &:focus {
+    box-shadow: 0 3px 6px 0 transparentize($brand-main, 0.5);
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px 0 transparentize($brand-main, 0.5);
+  }
+
+  &:active::after {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0s;
+  }
+
+  /**
+* @name Button Primary disabled
+* @markup
+* <button class="z-button-primary" disabled>Boton</button>
+**/
+
+  &:disabled,
+  &:disabled:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+/**
+* @name Button Secondary
+* @markup
+* <button class="z-button-secondary ripple-main">Boton</button>
+**/
+
+.z-button-secondary {
+
+  @extend .z-button-primary;
+  background-color: transparent;
+  border: 2px solid $brand-main;
+  color: $brand-main;
+  cursor: pointer;
+  line-height: 45px;
+  text-decoration: none;
+
+  /**
+* @name Button Secondary Disabled
+* @markup
+* <button class="z-button-secondary" disabled>Boton</button>
+**/
+
+  &:disabled,
+  &:disabled:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+/**
+* @name Button Sticky
+* @markup
+* <button class="z-button-sticky ripple-white">Boton</button>
+**/
+
+.z-button-sticky {
+
+  @extend .z-button-primary;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  height: 64px;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+  text-decoration: none;
+  z-index: 99;
+
+  /**
+* @name Button Sticky disabled
+* @markup
+* <button class="z-button-sticky" disabled>Boton</button
+**/
+
+  &:disabled,
+  &:disabled:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+/**
+* @name Button Link
+* @markup
+* <button class="z-button-link ripple-main">Boton</button>
+**/
+
+.z-button-link {
+
+  @extend .z-button-primary;
+  background: transparent;
+  color: $brand-main;
+  min-width: inherit;
+  padding: 0 16px;
+  text-decoration: none;
+
+  &:hover {
+    background: $brand-main-04;
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  /**
+* @name Button Link disabled
+* @markup
+* <button class="z-button-link" disabled>Boton</button>
+**/
+
+  &:disabled,
+  &:disabled:hover {
+    background: transparent;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+/**
+* @name Ripple effect
+**/
+
+.ripple-main {
+  background-position: center;
+  transition: all 0.8s, box-shadow 0.2s;
+
+  &:hover {
+    background: $brand-main-04 radial-gradient(circle, transparent 1%, $brand-main-04 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $brand-main-40;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+.ripple-white {
+  background-position: center;
+  transition: all 0.8s, box-shadow 0.2s;
+
+  &:hover {
+    background: $brand-main radial-gradient(circle, transparent 1%, $brand-main-80 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $brand-main;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+/**
+* @name Loader
+* @markup
+* <button class="z-button-primary">
+*   <div class="z-loader-white"></div>
+* </button>
+**/
+
+.z-loader-white {
+  animation: spin 1s linear infinite;
+  border: 3px solid $brand-main-40;
+  border-radius: 50%;
+  border-top: 3px solid $ui-grayscale-white;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.z-loader-main {
+  animation: spin 1s linear infinite;
+  border: 3px solid $brand-main-40;
+  border-radius: 50%;
+  border-top: 3px solid $brand-main;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/**
+* @name Switch
+* @markup
+* <div class="z-switch-html">
+*   <input type="checkbox" id="switch"/>
+*   <label for="switch"></label>
+* </div>
+**/
+
+.#{$prefix}switch-html > input[type=checkbox] {
+  height: 0;
+  visibility: hidden;
+  width: 0;
+
+  &:checked + label {
+    background: $brand-main;
+  }
+
+  &:checked + label::after {
+    transform: translateX(100%);
+  }
+}
+
+.#{$prefix}switch-html > label {
+  background-color: $ui-grayscale-black-20;
+  border-radius: 100px;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  position: relative;
+  text-indent: -9999px;
+  width: 36px;
+
+  &::after {
+    background-color: $ui-grayscale-white;
+    border-radius: 90px;
+    content: "";
+    height: 16px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    transition: 0.3s;
+    width: 16px;
+  }
+}
+
+/**
+* @name Switch disabled
+* @markup
+* <div class="z-switch-html">
+*   <input type="checkbox" id="switch2" disabled/>
+*   <label for="switch2"></label>
+* </div>
+**/
+
+.#{$prefix}switch-html > input:disabled + label::after {
+  cursor: not-allowed;
+  left: 10px;
+  position: absolute;
+
+}
+
+/**
+* @name Snackbar
+* @markup
+* <div class="z-snack">
+*  <label class="texto-snack">Texto del Snackbar.</label>
+*  <div class="acciones-snack">
+*     <a class="link-snack">Link del Snackbar</a>
+*     <i class="icon-cross icono-snack size-16"></i>
+*   </div>
+* </div>
+**/
+
+.#{$prefix}snack {
+  align-items: center;
+  background-color: $ui-grayscale-black-80;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 0 4px 0 rgba(0, 0, 0, 0.22);
+  font-family: $text-font-stack;
+  max-width: 448px;
+  padding: 14px 16px;
+  width: 448px;
+}
+
+.link-snack {
+  color: $brand-main;
+  cursor: pointer;
+  font-family: $text-font-stack;
+  font-size: $space-16;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+.texto-snack {
+  color: $ui-grayscale-white;
+}
+
+.icono-snack {
+  color: $ui-grayscale-white;
+  float: right;
+  position: relative;
+}
+
+.acciones-snack {
+  float: right;
+}
+
+/**
+* @name Alert
+* @markup
+* <div class="z-alert z-alert__success">
+*   <div class="icon icono-alert">
+*      <i class="icon-check-circle size-24"></i>
+*   </div>
+*   <label class="texto-alert">Texto del Alert.</label>
+* </div>
+**/
+
+.#{$prefix}alert {
+  align-items: center;
+  border-radius: 4px;
+  font-family: $primary-font-stack;
+  max-width: 360px;
+  padding: 14px 16px;
+  width: 360px;
+
+  &__success {
+    background-color: $ui-feedback-success-light;
+    border: 1px solid #AEDFCF;
+    color: $ui-feedback-success-dark;
+    font-size: 16px;
+  }
+
+  &__warning {
+    background-color: $ui-feedback-warning-ligth;
+    border: 1px solid #E1D0AE;
+    color: $ui-feedback-warning-dark;
+    font-size: 16px;
+  }
+
+  &__error {
+    background-color: $ui-feedback-error-ligth;
+    border: 1px solid #DDACAC;
+    color: $ui-feedback-error;
+    font-size: 16px;
+  }
+}
+
+.icono-alert {
+  bottom: 4px;
+  float: left;
+  padding-right: 12px;
+  position: relative;
+}
+
+/**
+* @name Card
+* @markup
+* <div class="z-card-html ripple-card">
+*    <div class="card-content">
+*       <p>Texto de la card.</p>
+*    </div>
+* </div>
+**/
+
+.#{$prefix}card-html {
+  background-color: $ui-grayscale-white;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  font-family: $text-font-stack;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .card-content {
+    padding: 24px;
+  }
+
+  // p ul li {
+  //   border: 0;
+  //   font: inherit;
+  //   font-size: 100%;
+  //   margin: 0;
+  //   padding: 0;
+  //   vertical-align: baseline;
+  // }
+
+}
+
+/**
+* @name Ripple effect for card
+**/
+
+.ripple-card {
+  background-position: center;
+  transition: background 0.8s;
+
+  &:hover {
+    background: $ui-grayscale-white radial-gradient(circle, transparent 1%, $ui-grayscale-black-3 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $ui-grayscale-white;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+/**
+* @name List
+* @markup
+* <div class="z-card-html">
+*  <ul>
+*   <li class="z-list-html z-list-html__li-texto ripple-card">
+*    <div class="z-list-html__li-texto__primary">
+*      <p>Texto</p>
+*      <p class="z-list-html__li-texto__sub-title">Secundario</p>
+*    </div>
+*    <div class="z-list-html__li-texto__secondary">
+*      <p>$200</p>
+*      <p class="z-list-html__li-texto__sub-title">-$135,50</p>
+*    </div>
+*   </li>
+*  </ul>
+* </div>
+**/
+
+.#{$prefix}list-html {
+  align-items: center;
+  border-bottom: 1px solid $ui-grayscale-black-6;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 94px;
+  overflow: hidden;
+  padding: 0 24px 0 24px;
+  position: relative;
+
+  &:hover {
+    background-color: $ui-grayscale-black-2;
+  }
+
+  &__li-texto {
+    color: $ui-grayscale-black-80;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    font-family: $text-font-stack;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    margin: auto;
+
+    &__sub-title {
+      color: $ui-grayscale-black-33;
+      font-size: 14px;
+      height: 13px;
+      padding: 9px 0 0 0;
+    }
+
+    &__primary {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 3;
+      margin: auto;
+    }
+
+    &__secondary {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+  }
+}
+
+/**
+* @name List disabled
+* @markup
+* <div class="z-card-html">
+*  <ul>
+*    <li class="z-list-html z-list-html--disabled">
+*      <div class="z-list-html__li-texto__primary">
+*         <p>Texto</p>
+*         <p class="z-list-html__li-texto__sub-title">Secundario</p>
+*      </div>
+*      <div class="z-list-html__li-texto__secondary">
+*        <p>$200</p>
+*        <p class="z-list-html__li-texto__sub-title">-$135,50</p>
+*      </div>
+*    </li>
+*  </ul>
+* </div>
+
+**/
+
+.#{$prefix}list-html--disabled {
+  color: $ui-grayscale-black-20;
+  cursor: not-allowed;
+
+  &__li-texto {
+    color: $ui-grayscale-black-20;
+  }
+
+  &__sub-title {
+    color: $ui-grayscale-black-20;
+  }
+}
+
+/**
+* @name Chip
+* @markup
+* <div>
+*  <label class="z-chip ">
+*    <input type="radio" name="radio-group"/>
+*    <span class="ripple-chip"><p class="chip-text">$50</p></span>
+*  </label>
+* </div>
+**/
+
+.#{$prefix}chip {
+
+  input {
+    display: none;
+  }
+
+  .chip-text {
+    color: $ui-grayscale-black-60;
+    cursor: pointer;
+    font-family: $text-font-stack;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    margin: auto;
+    text-align: center;
+    width: auto;
+  }
+
+  input:checked ~ span,
+  input[checked="checked"] ~ span {
+    background-color: $brand-main-20;
+
+    .chip-text {
+      color: $brand-main;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 6px 0 transparentize($brand-main, 0.4);
+    }
+  }
+
+  span {
+    align-items: center;
+    background-color: $ui-grayscale-black-6;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    margin: 0 8px 16px 0;
+    min-width: 46px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+
+    /**
+* @name Chip disabled
+* @markup
+* <div>
+*  <label class="z-chip ">
+*    <input type="radio" name="radio-group" disabled/>
+*    <span class="disabled"><p class="chip-text">$50</p></span>
+*  </label>
+* </div>
+**/
+
+    &.disabled,
+    &.disabled:hover {
+      background-color: $ui-grayscale-black-6;
+      box-shadow: none;
+      cursor: not-allowed;
+
+      .chip-text {
+        color: $ui-grayscale-black-20;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+}
+
+/**
+* @name Ripple effect for chip
+**/
+
+.ripple-chip {
+  background-position: center;
+  transition: background 0.8s;
+
+  &:hover {
+    background: $ui-grayscale-black-6 radial-gradient(circle, transparent 1%, $brand-main-40 1%) center/15000%;
+    box-shadow: 0 3px 6px 0 rgba(51, 51, 51, 0.2);
+  }
+
+  &:active {
+    background-color: $brand-main-20;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+
+/**
+* @name Table
+* @markup
+* <table class="z-table">
+*  <tr class="tr-header">
+*    <th >Columna 1</th>
+*    <td>Columna 2</td>
+*  </tr>
+*  <tr class="tr-content">
+*   <th>Ejemplo</th>
+*   <td>Ejemplo</td>
+*  </tr>
+* </table>
+**/
+
+.z-table {
+  text-align: left;
+  width: 100%;
+
+  .z-table > th,
+  .z-table > td {
+    border-right: 1px solid $ui-grayscale-black-6;
+    padding: 14px 13px;
+
+  }
+}
+
+.tr-content {
+  align-items: center;
+  border-color: $ui-grayscale-black-6;
+  border-style: solid;
+  border-width: 0.1px;
+  color: $ui-grayscale-black-80;
+  font-family: $text-font-stack;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 100%;
+  letter-spacing: normal;
+  line-height: 1.57;
+  padding: initial;
+  width: 100%;
+}
+
+.tr-header {
+  align-items: center;
+  background-color: #F8F8F8;
+  border-color: $ui-grayscale-black-6;
+  border-style: solid;
+  border-width: 0.1px;
+  font-family: $text-font-stack;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 100%;
+  letter-spacing: normal;
+  line-height: 1.57;
+  padding: initial;
+  width: 100%;
+}
+
+/**
+* @name Avatar
+* @markup
+* <div class="z-avatar-html">
+*  <div class="z-avatar-html__char z-avatar-html__large">
+*     <p class="z-avatar-html__char--initials">K</p>
+* </div>
+*  </div>
+* </div>
+**/
+
+.z-avatar-html {
+  border-radius: 100%;
+  font-family: $primary-font-stack;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+
+  &__char {
+    background-color: $brand-main-40;
+    border-radius: 100%;
+    color: $ui-grayscale-white;
+    display: flex;
+    line-height: 2;
+
+    &--initials {
+      line-height: 1.7;
+      margin: auto;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: $ui-grayscale-black-10;
+    border-radius: 100%;
+    color: $ui-grayscale-black-60;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    border-radius: 100%;
+  }
+
+  &__extra-large {
+    font-size: 40px;
+    height: $space-64;
+    width: $space-64;
+  }
+
+  &__large {
+    font-size: 30px;
+    height: $space-48;
+    width: $space-48;
+  }
+
+  &__medium {
+    font-size: 20px;
+    height: $space-32;
+    width: $space-32;
+  }
+
+  &__small {
+    font-size: 10px;
+    height: $space-24;
+    width: $space-24;
+  }
+}
