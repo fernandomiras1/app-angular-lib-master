@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { LoadingType, LoadingTypeStyleMapping } from '../loading/loading.component';
+// import { LoadingType, LoadingTypeStyleMapping } from '../loading/loading.component';
 
 export const ButtonComponentType = {
   PRIMARY: 'primary',
@@ -28,7 +28,7 @@ export class NGZButtonComponent {
   @Output() clickButton = new EventEmitter();
 
   typeButtonClass = ButtonTypeStyleMapping.get(ButtonComponentType.PRIMARY);
-  typeLoadingClass = LoadingTypeStyleMapping.get(ButtonComponentType.PRIMARY);
+  // typeLoadingClass = LoadingTypeStyleMapping.get(ButtonComponentType.PRIMARY);
 
   public isBackground = true;
   @Input()
@@ -36,14 +36,14 @@ export class NGZButtonComponent {
     switch (type) {
       case ButtonComponentType.PRIMARY: {
         this.typeButtonClass = ButtonTypeStyleMapping.get(ButtonComponentType.PRIMARY);
-        this.typeLoadingClass = LoadingType.PRIMARY;
+        // this.typeLoadingClass = LoadingType.PRIMARY;
         this.backgroundRipple = 'rgba(255, 255, 255, 0.32)';
         break;
       }
       case ButtonComponentType.SECONDARY: {
         this.isBackground = false;
         this.typeButtonClass = ButtonTypeStyleMapping.get(ButtonComponentType.SECONDARY);
-        this.typeLoadingClass = LoadingType.SECONDARY;
+        // this.typeLoadingClass = LoadingType.SECONDARY;
         this.backgroundRipple = 'rgba(255, 102, 0, 0.32)';
         break;
       }
@@ -61,7 +61,7 @@ export class NGZButtonComponent {
       }
       default: {
         this.typeButtonClass = ButtonTypeStyleMapping.get(ButtonComponentType.PRIMARY);
-        this.typeLoadingClass = LoadingType.PRIMARY;
+        // this.typeLoadingClass = LoadingType.PRIMARY;
         this.backgroundRipple = 'rgba(255, 255, 255, 0.32)';
       }
     }
