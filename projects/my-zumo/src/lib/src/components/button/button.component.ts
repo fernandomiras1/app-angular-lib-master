@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 // import { LoadingType, LoadingTypeStyleMapping } from '../loading/loading.component';
 
 @Component({
-  selector: 'z-button',
+  selector: 'lib-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })

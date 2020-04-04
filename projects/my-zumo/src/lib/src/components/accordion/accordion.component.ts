@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { collapseExpand } from '../../utils/animations';
 
 @Component({
-  selector: 'z-accordion',
+  selector: 'lib-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss'],
   animations: [collapseExpand()]
@@ -15,9 +15,6 @@ export class NGZAccordionComponent implements OnInit {
   @Input() isNotLine = false;
 
   public backgroundColor: string;
-
-  constructor() {
-  }
 
   ngOnInit() {
     this.backgroundColor = this.colorBackground;
