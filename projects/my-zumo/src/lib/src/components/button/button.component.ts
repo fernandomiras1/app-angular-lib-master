@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class NGZButtonComponent {
   @Input() text = 'Chateá con nosotros';
-  @Input() colorBackground = 'gray';
+  @Input() colorBackground = '#1976d2';
   @Input() hrefUrl = '#';
 }
