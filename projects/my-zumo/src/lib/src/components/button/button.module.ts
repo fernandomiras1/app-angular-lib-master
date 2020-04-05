@@ -1,22 +1,22 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NGZCardComponent } from './card.component';
+import { NGZButtonComponent } from './button.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    NGZCardComponent
+    NGZButtonComponent
   ],
   exports: [
-    NGZCardComponent
+    NGZButtonComponent
   ]
 })
-export class NGZCardModule {
+export class NGZButtonModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: NGZCardModule
+      ngModule: NGZButtonModule
     };
   }
 }

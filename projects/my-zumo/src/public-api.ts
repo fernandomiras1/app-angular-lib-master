@@ -3,4 +3,6 @@
  */
 
 // export * from './lib/src/components/button/index';
-export * from './lib/src/my-zumo.module';
+// export * from './lib/src/my-zumo.module';
+
+export * from './lib/src/index';
