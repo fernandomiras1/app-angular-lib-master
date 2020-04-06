@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NGZHeaderComponent } from './header.component';
+import { ZDirectiveModule } from '../../utils/directives/directives.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ZDirectiveModule
   ],
   declarations: [
     NGZHeaderComponent

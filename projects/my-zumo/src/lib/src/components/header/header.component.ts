@@ -7,9 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NGZHeaderComponent implements OnInit {
 @Input() title = 'Angular';
+public showHeader = true;
 constructor() { }
 
 ngOnInit() {
+}
+
+isShowHeader(event: boolean) {
+  this.showHeader = event;
 }
 
 }
