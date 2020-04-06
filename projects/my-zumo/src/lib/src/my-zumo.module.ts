@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NGZButtonModule } from './components/button';
 import { NGZCardModule } from './components/card/card.module';
 import { NGZHeaderModule } from './components/header/header.module';
+import { NGZSliderControlModule } from './components/slider-control/slider-control.module';
 
 @NgModule({
   imports: [
@@ -11,13 +12,15 @@ import { NGZHeaderModule } from './components/header/header.module';
     NGZAccordionModule,
     NGZButtonModule,
     NGZCardModule,
-    NGZHeaderModule
+    NGZHeaderModule,
+    NGZSliderControlModule
   ],
   exports: [
     NGZAccordionModule,
     NGZButtonModule,
     NGZCardModule,
-    NGZHeaderModule
+    NGZHeaderModule,
+    NGZSliderControlModule
   ]
 })
 export class MyZumoModule {}
