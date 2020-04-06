@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NGZHeaderComponent } from './header.component';
 
@@ -13,10 +13,4 @@ import { NGZHeaderComponent } from './header.component';
     NGZHeaderComponent
   ]
 })
-export class NGZHeaderModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: NGZHeaderModule
-    };
-  }
-}
+export class NGZHeaderModule {}

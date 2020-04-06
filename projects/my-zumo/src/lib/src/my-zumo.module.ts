@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { NGZAccordionModule } from './components/accordion/accordion.module';
 import { CommonModule } from '@angular/common';
 import { NGZButtonModule } from './components/button';
@@ -8,10 +8,10 @@ import { NGZHeaderModule } from './components/header/header.module';
 @NgModule({
   imports: [
     CommonModule,
-    NGZAccordionModule.forRoot(),
-    NGZButtonModule.forRoot(),
-    NGZCardModule.forRoot(),
-    NGZHeaderModule.forRoot()
+    NGZAccordionModule,
+    NGZButtonModule,
+    NGZCardModule,
+    NGZHeaderModule
   ],
   exports: [
     NGZAccordionModule,
@@ -20,11 +20,4 @@ import { NGZHeaderModule } from './components/header/header.module';
     NGZHeaderModule
   ]
 })
-export class MyZumoModule {
-  constructor() {}
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: MyZumoModule
-    };
-  }
-}
+export class MyZumoModule {}

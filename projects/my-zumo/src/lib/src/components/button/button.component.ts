@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class NGZButtonComponent {
-  @Input() text = 'Chateá con nosotros';
+  @Input() text = 'Chateá con nosotros v4';
   @Input() colorBackground = '#1976d2';
   @Input() hrefUrl = '#';
 }
