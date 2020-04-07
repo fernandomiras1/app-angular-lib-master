@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MyZumoModule
   ],
+  exports: [ MyZumoModule],
   providers: [],
   bootstrap: [AppComponent]
 })
