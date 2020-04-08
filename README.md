@@ -47,4 +47,81 @@ es una sola vez
 npm install ../zumo-1.2.0.tgz 
 luego npm install zumo  ( siempre ) 
 
+## Storybook en Angular 
 
+[Documentacion](https://storybook.js.org/docs/guides/guide-angular/#automatic-setup)
+
+Step 1: Add dependencies. 
+Run `npm install @storybook/angular --save-dev`
+Run `npm install babel-loader @babel/core --save-dev`
+
+Step 2: Add a npm script in `package.json`
+
+```json
+{
+"scripts": {
+  "storybook": "start-storybook"
+}
+}
+
+```
+Step 3: Create the main file
+
+For a basic Storybook configuration, the only thing you need to do is tell Storybook where to find stories.
+
+To do that, create a file at `.storybook/main.js` with the following content:
+
+```js
+
+module.exports = {
+stories: ['../src/**/*.stories.[tj]s'],
+};
+
+```
+Eso cargará todas las historias debajo de su `../src` directorio que coincidan con el patrón `*.stories.[tj]s.` Recomendamos la ubicación conjunta de sus historias con sus archivos de origen, pero puede colocarlas donde elija.
+
+Paso 4: configuración de Storybook TypeScript
+
+@storybook/angular está utilizando ForkTsCheckerWebpackPlugin para aumentar el rendimiento de la compilación. Esto hace que sea necesario crear un tsconfig.jsonarchivo .storybook/tsconfig.jsoncon el siguiente contenido:
+
+```json
+
+{
+"extends": "../tsconfig.json",
+"exclude": [
+  "../src/test.ts",
+  "../src/**/*.spec.ts",
+  "../projects/**/*.spec.ts"
+],
+"include": [
+  "../src/**/*",
+  "../projects/**/*"
+]
+}
+
+```
+Paso 5: escribe tus historias
+Ahora crea un `../src/index.stories.js` archivo y escribe tu primera historia así:
+
+```js
+
+import { Button } from '@storybook/angular/demo';
+
+export default { title: 'My Button' }
+
+export const withText = () => ({
+  component: Button,
+  props: {
+    text: 'Hello Button',
+  },
+});
+
+export const withEmoji = () => ({
+  component: Button,
+  props: {
+    text: '😀 😎 👍 💯',
+  },
+});
+
+
+```
