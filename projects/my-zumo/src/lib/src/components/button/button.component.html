@@ -1,6 +1,9 @@
-<div class="cta-wrapper {{colorBackground}}">
-  <a rel="noopener noreferrer" [href]="hrefUrl" 
-    [style.background-color]="colorBackground" 
-    class="cta cta-filled">{{text}}
-  </a>
-</div>
+<!-- zRippleEffect [backgroundColor]="backgroundRipple" -->
+<button
+class="z-btn {{typeButtonClass}}"
+[style.width]="widthButton" [ngClass]="{'z-loading': isLoading}" [disabled]="disabled"
+(click)="onButtonClicked()">
+<div [style.visibility]="isLoading ? 'hidden' : 'visible'">{{ text }}</div>
+<lib-loading class="z-btn-spinner" *ngIf="isLoading" [withBg]="isBackground"
+[type]="typeLoadingClass" [size]="'medium'"></lib-loading>
+</button>

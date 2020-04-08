@@ -23,7 +23,7 @@ export class StickyHeaderDirective implements AfterViewChecked {
   }
 
   @HostListener('window:scroll')
-  private handleScroll() {
+  handleScroll() {
     // el scrollTop comineza en 0 luego va aumentando a medida que vamos scrolliando
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 

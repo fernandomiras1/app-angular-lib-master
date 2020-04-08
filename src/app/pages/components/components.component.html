@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="contenedor">
     
-<h2 style="text-align: center; color: blue"> Componentes Generales </h2>
+<h1 style="text-align: center;"> Componentes Generales </h1>
 
   <div class="card">
-    <p class="z-title" style="color: #fe5000;">Slider</p>
+    <h2>Card</h2>
     <br>
     <div class="card-body">
       <!-- <input type="range" class="z-slider" min="1" max="100" value="1"/> -->
@@ -24,11 +24,52 @@
   </div>
 
   <div class="card">
-  <p class="z-title" style="color: #fe5000;"><i class="fas fa-ruler-triangle    "></i></p>
+    <h2>Button</h2>
+    <br>
+    <div class="card-body">
+      <lib-button [text]="'Min'">
+      </lib-button>
+  
+      <lib-button [text]="'Min'" [type]="'secondary'">
+      </lib-button>
+  
+       <lib-button [text]="'Medium length'" [type]="'secondary'" [isLoading]="isLoadingPrimaryWithSpinner"
+          (clickButton)="onClickPrimaryWithSpinner()">
+        </lib-button>
+  
+       <lib-button [text]="'Medium length'" [isLoading]="isLoadingPrimaryWithSpinner"
+          (clickButton)="onClickPrimaryWithSpinner()">
+        </lib-button>
+  
+        <lib-button [widthButton]="'300px'" [text]="'Fixed width'" [disabled]="true">
+        </lib-button>
+  
+        <lib-button [widthButton]="'300px'" [text]="'Fixed width'" [type]="'secondary'" [disabled]="true">
+        </lib-button>
+  
+        <lib-button class="align-left" [text]="'text'" [type]="'link'">
+        </lib-button>
+  
+        <lib-button class="align-left" [text]="'textDisabled'" [type]="'link'" [disabled]="true">
+        </lib-button>
+  
+        <lib-button [text]="'text'" [type]="'sticky'">
+        </lib-button>
+    
+        <!-- <lib-button [text]="'textStickyWithSpinner'" [type]="'sticky'" [isLoading]="isLoadingPrimaryWithSpinner"
+          (clickButton)="onClickPrimaryWithSpinner()">
+        </lib-button> -->
+  
+        <lib-button [text]="'textDisabled'" [type]="'sticky'" [disabled]="true">
+        </lib-button>
+
+    </div>
+  </div>
+
+  <div class="card">
+  <h2>Slider y Loading</h2>
   <br>
   <div class="card-body">
-    <!-- <input type="range" class="z-slider" min="1" max="100" value="1"/> -->
-    <lib-button></lib-button>
   
     <lib-slider-control 
     [min]="min"
