@@ -5,13 +5,13 @@ const routes: Routes = [
   {
     path: 'components',
     data: {title: 'Form componentse'},
-    loadChildren: './pages/components/components.module#ComponentModule'
+    loadChildren: () => import('./pages/components/components.module').then(m => m.ComponentModule)
     // loadChildren: () => import('./pages/client/client.module').then(m => m.ClientModule)
   },
   {
     path: 'home',
     data: {title: 'Contacts'},
-    loadChildren: './pages/home/home.module#HomeModule'
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
     // loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {

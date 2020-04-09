@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/app-angular-lib",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -54,6 +55,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -146,6 +151,11 @@
           "options": {
             "tsConfig": "projects/my-zumo/tsconfig.lib.json",
             "project": "projects/my-zumo/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-zumo/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -171,5 +181,8 @@
       }
     }
   },
-  "defaultProject": "app-angular-lib"
+  "defaultProject": "app-angular-lib",
+  "cli": {
+    "analytics": false
+  }
 }
