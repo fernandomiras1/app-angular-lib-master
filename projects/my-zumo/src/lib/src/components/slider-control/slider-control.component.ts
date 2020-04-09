@@ -24,8 +24,8 @@ export class NGZSliderControlComponent implements OnInit {
   @Input() title: string;
   @Output() valuesChange: EventEmitter<number> = new EventEmitter<number>();
 
-  @ViewChild('range') range: ElementRef;
-  @ViewChild('label') label: ElementRef;
+  @ViewChild('range', { static: true }) range: ElementRef;
+  @ViewChild('label', { static: true }) label: ElementRef;
   public posX: number;
   public posLineX: number;
   public valueRange: number;
