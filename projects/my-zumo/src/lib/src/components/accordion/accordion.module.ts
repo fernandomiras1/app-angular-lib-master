@@ -14,7 +14,7 @@ import { NGZAccordionComponent } from './accordion.component';
   ]
 })
 export class NGZAccordionModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<NGZAccordionModule> {
     return {
       ngModule: NGZAccordionModule
     };
