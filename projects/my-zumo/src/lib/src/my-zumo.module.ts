@@ -6,6 +6,7 @@ import { NGZCardModule } from './components/card/card.module';
 import { NGZHeaderModule } from './components/header/header.module';
 import { NGZSliderControlModule } from './components/slider-control/slider-control.module';
 import { NGZLoadingModule } from './components/loading';
+import { NGZChipsModule } from './components/chips';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { NGZLoadingModule } from './components/loading';
     NGZCardModule,
     NGZHeaderModule,
     NGZSliderControlModule,
-    NGZLoadingModule
+    NGZLoadingModule,
+    NGZChipsModule
   ],
   exports: [
     NGZAccordionModule,
@@ -23,7 +25,8 @@ import { NGZLoadingModule } from './components/loading';
     NGZCardModule,
     NGZHeaderModule,
     NGZSliderControlModule,
-    NGZLoadingModule
+    NGZLoadingModule,
+    NGZChipsModule
   ]
 })
 export class MyZumoModule {}
