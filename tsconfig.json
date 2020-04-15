@@ -22,9 +22,6 @@
     "paths": {
       "my-zumo": [
         "dist/my-zumo"
-      ],
-      "my-zumo/*": [
-        "dist/my-zumo/*"
       ]
     }
   }

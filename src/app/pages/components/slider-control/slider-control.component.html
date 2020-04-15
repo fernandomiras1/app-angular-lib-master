@@ -1,1 +1,17 @@
-<p>slider-control works!</p>
+<div class="contenedor">
+    <div class="card">
+        <h2>Slider Control</h2>
+        <br>
+        <div class="card-body">
+            <lib-slider-control 
+                [min]="min"
+                [max]="max"
+                [step]="step"
+                [disabled]="disabled"
+                [prefix]="prefix"
+                (valuesChange)="valuesChange($event)"
+                [title]="titleActive">
+            </lib-slider-control>
+        </div>
+      </div>
+</div>

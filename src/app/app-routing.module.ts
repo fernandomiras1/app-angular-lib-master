@@ -9,13 +9,23 @@ const routes: Routes = [
   },
   {
     path: 'button',
-    data: {title: 'Buttin'},
+    data: {title: 'Button'},
     loadChildren: () => import('./pages/components/button/button.module').then(m => m.ButtonModule)
   },
   {
     path: 'chips',
     data: {title: 'Chips'},
     loadChildren: () => import('./pages/components/chips/chips.module').then(m => m.ChipsModule)
+  },
+  {
+    path: 'slider-control',
+    data: {title: 'Slider Control'},
+    loadChildren: () => import('./pages/components/slider-control/slider-control.module').then(m => m.SliderControlModule)
+  },
+  {
+    path: 'loading',
+    data: {title: 'Loading'},
+    loadChildren: () => import('./pages/components/loading/loading.module').then(m => m.LoadingModule)
   },
   {
     path: 'home',
