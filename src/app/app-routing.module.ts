@@ -13,6 +13,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/components/button/button.module').then(m => m.ButtonModule)
   },
   {
+    path: 'chips',
+    data: {title: 'Chips'},
+    loadChildren: () => import('./pages/components/chips/chips.module').then(m => m.ChipsModule)
+  },
+  {
     path: 'home',
     data: {title: 'Home'},
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
