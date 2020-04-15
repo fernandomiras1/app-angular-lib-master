@@ -3,20 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'components',
-    data: {title: 'Form componentse'},
-    loadChildren: () => import('./pages/components/components.module').then(m => m.ComponentModule)
-    // loadChildren: () => import('./pages/client/client.module').then(m => m.ClientModule)
+    path: 'card',
+    data: {title: 'Card'},
+    loadChildren: () => import('./pages/components/card/card.module').then(m => m.CardModule)
+  },
+  {
+    path: 'button',
+    data: {title: 'Buttin'},
+    loadChildren: () => import('./pages/components/button/button.module').then(m => m.ButtonModule)
   },
   {
     path: 'home',
-    data: {title: 'Contacts'},
+    data: {title: 'Home'},
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
-    // loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
     path: '',
-    redirectTo: '/components',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
 ];

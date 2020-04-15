@@ -2,14 +2,14 @@
 <!-- Toolbar -->
 <lib-header title="librería Angular y subirla a NPM">
   <ul>
-    <li><a routerLink="/components" routerLinkActive="active-link">Components</a></li>
     <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
     <li>
-      <span>Nosotros</span>
+      <span>Components</span>
         <ul>
-          <li><a href="#">Misión</a></li>
-          <li><a href="#">Visión</a></li>
-          <li><a href="#">Valores</a></li>
+          <li><a routerLink="/card" routerLinkActive="active-link">Card</a></li>
+          <li><a routerLink="/button" routerLinkActive="active-link">Button</a></li>
+          <!-- <li><a (click)="onTop()">Chips</a></li> -->
+          <li><a (click)="scrollToElement(id_card)">Chips</a></li>
         </ul>
     </li>
   </ul>

@@ -1,0 +1,45 @@
+<div class="contenedor">
+
+  <div class="card">
+    <h2>Button</h2>
+    <br>
+    <div class="card-body">
+      <lib-button [text]="'Min'">
+      </lib-button>
+  
+      <lib-button [text]="'Min'" [type]="'secondary'">
+      </lib-button>
+  
+       <lib-button [text]="'Medium length'" [type]="'secondary'" [isLoading]="isLoadingPrimaryWithSpinner"
+          (clickButton)="onClickPrimaryWithSpinner()">
+        </lib-button>
+  
+       <lib-button [text]="'Medium length'" [isLoading]="isLoadingPrimaryWithSpinner"
+          (clickButton)="onClickPrimaryWithSpinner()">
+        </lib-button>
+  
+        <lib-button [widthButton]="'300px'" [text]="'Fixed width'" [disabled]="true">
+        </lib-button>
+  
+        <lib-button [widthButton]="'300px'" [text]="'Fixed width'" [type]="'secondary'" [disabled]="true">
+        </lib-button>
+  
+        <lib-button class="align-left" [text]="'text'" [type]="'link'">
+        </lib-button>
+  
+        <lib-button class="align-left" [text]="'textDisabled'" [type]="'link'" [disabled]="true">
+        </lib-button>
+  
+        <lib-button [text]="'text'" [type]="'sticky'">
+        </lib-button>
+    
+        <!-- <lib-button [text]="'textStickyWithSpinner'" [type]="'sticky'" [isLoading]="isLoadingPrimaryWithSpinner"
+          (clickButton)="onClickPrimaryWithSpinner()">
+        </lib-button> -->
+  
+        <lib-button [text]="'textDisabled'" [type]="'sticky'" [disabled]="true">
+        </lib-button>
+
+    </div>
+  </div>
+</div>
