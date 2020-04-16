@@ -1,4 +1,5 @@
 import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
+import { DocumentService } from '../../services/document/document.service';
 
 @Directive({
   selector: '[zHover]'
@@ -13,12 +14,12 @@ export class ZHoverDirective implements OnInit {
   width: number;
   widthViewport: number;
 
-  constructor(public el: ElementRef, public renderer: Renderer2) {
+  constructor(public el: ElementRef, public renderer: Renderer2, private documentService: DocumentService) {
     this.calculateWidthViewport();
   }
 
   calculateWidthViewport(): void {
-    this.widthViewport = document.body.offsetWidth;
+    this.widthViewport = this.documentService.nativeDocument.body.offsetWidth;
   }
 
   ngOnInit(): void {

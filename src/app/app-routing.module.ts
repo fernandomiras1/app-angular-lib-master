@@ -28,6 +28,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/components/loading/loading.module').then(m => m.LoadingModule)
   },
   {
+    path: 'select',
+    data: {title: 'select'},
+    loadChildren: () => import('./pages/components/select/select.module').then(m => m.SelectModule)
+  },
+  {
     path: 'home',
     data: {title: 'Home'},
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)

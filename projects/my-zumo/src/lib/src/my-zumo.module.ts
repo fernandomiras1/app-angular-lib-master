@@ -7,6 +7,7 @@ import { NGZHeaderModule } from './components/header/header.module';
 import { NGZSliderControlModule } from './components/slider-control/slider-control.module';
 import { NGZLoadingModule } from './components/loading';
 import { NGZChipsModule } from './components/chips';
+import { NGZSelectModule } from './components/select';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { NGZChipsModule } from './components/chips';
     NGZHeaderModule,
     NGZSliderControlModule,
     NGZLoadingModule,
-    NGZChipsModule
+    NGZChipsModule,
+    NGZSelectModule
   ],
   exports: [
     NGZAccordionModule,
@@ -26,7 +28,8 @@ import { NGZChipsModule } from './components/chips';
     NGZHeaderModule,
     NGZSliderControlModule,
     NGZLoadingModule,
-    NGZChipsModule
+    NGZChipsModule,
+    NGZSelectModule
   ]
 })
 export class MyZumoModule {}

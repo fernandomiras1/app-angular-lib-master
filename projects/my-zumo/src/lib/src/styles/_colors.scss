@@ -1,71 +1,12 @@
-
-// Primary
-// Primary brand color and variations.
-$brand-main: #FE5000;
-$brand-main-80: #FE7333;
-$brand-main-60: #FE9666;
-$brand-main-40: #FFB999;
-$brand-main-20: #FFDCCC;
-$brand-main-10: #FEEDE5;
-$brand-main-04: #FFF8F5;
-
-// Secondary
-// Escorts and compliments the brand color.
-$brand-secondary-gold: #FF9E18;
-$brand-secondary-pink: #E74F3D;
-$brand-secondary-red: #E1251B;
-$brand-secondary-burgundy: #96262C;
-$brand-secondary-sand: #F0EBE6;
-
-// Feedback
-// Reserved to give UI feedback information.
-$ui-feedback-success: #037756; // deprecated
-$ui-feedback-success-dark: #037756;
-$ui-feedback-success-mid: #00A67A;
-$ui-feedback-success-light: #E6F9F3;
-$ui-feedback-error: #AF0000; // deprecated
-$ui-feedback-error-dark: #AF0000;
-$ui-feedback-error-mid: #D10000;
-$ui-feedback-error-ligth: #FBE5E5;
-$ui-feedback-warning: #996800; // deprecated
-$ui-feedback-warning-dark: #996800;
-$ui-feedback-warning-mid: #FFBB19;
-$ui-feedback-warning-ligth: #FFF6E5;
-
-// Illustrations
-// Series of colors to be used in illustrations.
-$illustrations-red: #F96D6D;
-$illustrations-yellow: #FECF65;
-$illustrations-sky-blue: #53B5FD;
-$illustrations-blue: #5063FB;
-$illustrations-violet: #9A51E5;
-$illustrations-green: #63DBAA;
-$illustrations-steel: #B6C4CF;
-$illustrations-night-blue: #333B73;
-$illustrations-light-red: #FAAFAF;
-$illustrations-light-yellow: #FFECC2;
-$illustrations-light-sky-blue: #BBE2FF;
-$illustrations-light-blue: #B9C1FE;
-$illustrations-light-violet: #D8B3FF;
-$illustrations-light-green: #ADF0D5;
-$illustrations-light-steel: #DBEDFA;
-$illustrations-light-night-blue: #CFD5FF;
-
-// Interface
-// Grayscale values to be used on user interfaces.
-$ui-grayscale-black: #000000;
-$ui-grayscale-black-80: #333333;
-$ui-grayscale-black-60: #666666;
-$ui-grayscale-black-40: #767676;
-$ui-grayscale-black-33: #AAAAAA;
-$ui-grayscale-black-30: #BBBBBB;
-$ui-grayscale-black-20: #CCCCCC;
-$ui-grayscale-black-10: #E3E3E3;
-$ui-grayscale-black-6: #EEEEEE;
-$ui-grayscale-black-3: #F7F7F7;
-$ui-grayscale-black-2: #FAFAFA;
-$ui-grayscale-white: #FFFFFF;
-
+// Brand
+// Orange. Use for brand identification
+$color-brand-200: #FEE4D9;
+$color-brand-300: #FEC1A6;
+$color-brand-400: #FE9E73;
+$color-brand-500: #FE5000;
+$color-brand-600: #CB4000;
+$color-brand-700: #983000;
+$color-brand-800: #7E2700;
 
 // Grayscale
 // Use for user interface variations
@@ -79,17 +20,42 @@ $color-grayscale-700: #666666;
 $color-grayscale-800: #333333;
 $color-grayscale-900: #000000;
 
-// Brand
-// Orange. Use for brand identification
-$color-brand-200: #FEE4D9;
-$color-brand-300: #FEC1A6;
-$color-brand-400: #FE9E73;
-$color-brand-500: #FE5000;
-$color-brand-600: #CB4000;
-$color-brand-700: #983000;
-$color-brand-800: #7E2700;
+// Warning
+// Yellow. Use for warning feedback
+$color-warning-200: #FFF3DB;
+$color-warning-300: #FFE4AB;
+$color-warning-400: #FFD987;
+$color-warning-500: #FFB30F;
+$color-warning-600: #996B09;
+$color-warning-700: #735006;
+$color-warning-800: #5A3F05;
 
+// Error
+// Red. Use for error and danger feedback
+$color-error-200: #FCE5E5;
+$color-error-300: #F6B3B3;
+$color-error-400: #F18080;
+$color-error-500: #E40000;
+$color-error-600: #C20000;
+$color-error-700: #A00000;
+$color-error-800: #880000;
 
-// Sole Use
-// Colors reserved to be used for specific scenarios.
-$sole-promos: #0085CA;
+// Success
+// Green. Use for success and completion feedback
+$color-success-200: #E6F8EA;
+$color-success-300: #AAE8B8;
+$color-success-400: #7ADB8F;
+$color-success-500: #0EBF34;
+$color-success-600: #098524;
+$color-success-700: #075F1A;
+$color-success-800: #054C14;
+
+// Info
+// Blue. Use for interface information and non critical feedback
+$color-info-200: #E6EFFB;
+$color-info-300: #BFD6F7;
+$color-info-400: #72A5ED;
+$color-info-500: #005DE0;
+$color-info-600: #004AB3;
+$color-info-700: #003786;
+$color-info-800: #002E70;

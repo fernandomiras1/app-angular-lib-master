@@ -7,3 +7,4 @@ export * from './components/header/index';
 export * from './components/loading/index';
 export * from './components/slider-control/index';
 export * from './components/chips/index';
+export * from './components/select/index';

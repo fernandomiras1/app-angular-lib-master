@@ -1,0 +1,15 @@
+<div class="contenedor">
+    <div class="card">
+        <div class="card-body">
+            <lib-select [items]="itemsDias" [dropUp]="false" [item]="itemsDias[0]" [placeholderDefault]="'Día'"
+                [messagesHint]="messageHint" [messagesError]="'Seleccioná un día'">
+            </lib-select>
+            <br>
+            <h3>Item seleccionado</h3>
+            <lib-select [items]="itemsProductos" [item]="itemsProductos[0]"
+                [placeholderDefault]="'Producto'" [isDesktop]="true"
+                [messagesError]="'Seleccioná un producto'">
+            </lib-select>
+        </div>
+    </div>
+</div>
