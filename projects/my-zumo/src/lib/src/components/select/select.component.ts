@@ -1,6 +1,6 @@
 import {
   Component, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild,
-  ElementRef, AfterContentInit
+  ElementRef, AfterViewChecked
 } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject, Observable, Subject, Subscription, fromEvent } from 'rxjs';
@@ -14,7 +14,7 @@ import { NavigatorService } from '../../utils/services/navigator/navigator.servi
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss']
 })
-export class NGZSelectComponent implements OnInit, AfterContentInit, OnDestroy {
+export class NGZSelectComponent implements OnInit, AfterViewChecked, OnDestroy {
   @Input() placeholderDefault = 'Seleccione una opción';
   @Input() disabled = false;
   @Input() isDesktop = false;
@@ -54,7 +54,8 @@ export class NGZSelectComponent implements OnInit, AfterContentInit, OnDestroy {
     this.validationMoment = new BehaviorSubject<boolean>(null);
   }
 
-  ngAfterContentInit(): void {
+
+  ngAfterViewChecked(): void {
     this.widthSelectResults();
     if (!this.isMobileSelect) {
       this.resizeSubscription = fromEvent(window, 'resize').subscribe(() => this.widthSelectResults());
