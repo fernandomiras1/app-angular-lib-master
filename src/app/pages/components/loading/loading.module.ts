@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { LoadingRoutingModule } from './loading.routing';
 import { CommonModule } from '@angular/common';
-import { MyZumoModule } from 'projects/my-zumo/src/public-api';
+import { MyZumoModule } from 'my-zumo';
 import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading.component';
 @NgModule({

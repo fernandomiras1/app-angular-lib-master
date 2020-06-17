@@ -1,5 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { ComponentType } from '../../utils/enums/component-type.const';
+export const ComponentType = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  STICKY: 'sticky',
+  LINK: 'link',
+  HEADER: 'header'
+};
 
 export const LoadingTypeStyleMapping = new Map<string, string>();
 LoadingTypeStyleMapping.set(ComponentType.PRIMARY, 'z-primary');

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NGZLoadingComponent } from './loading.component';
-import { ZUtilsModule } from '../../utils/utils.module';
+
 
 describe('LoadingComponent', () => {
   let component: NGZLoadingComponent;
@@ -13,7 +13,6 @@ describe('LoadingComponent', () => {
         NGZLoadingComponent
       ],
       imports : [
-        ZUtilsModule
       ]
     })
     .compileComponents();
