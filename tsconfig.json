@@ -20,8 +20,17 @@
       "dom"
     ],
     "paths": {
+      
       "my-zumo": [
         "dist/my-zumo"
+      ],
+      "@my-zumo/core": [
+        "node_modules/@my-zumo/core",
+        "projects/my-zumo/core"
+      ],
+      "@my-zumo/core/*": [
+        "node_modules/@my-zumo/core/*",
+        "projects/my-zumo/core/*"
       ]
     }
   }

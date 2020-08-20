@@ -1,0 +1,8 @@
+{
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public-api.ts",
+      "styleIncludePaths": ["../../../../../public/styles"]
+    }
+  }
+}

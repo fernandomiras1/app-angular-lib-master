@@ -1,6 +1,0 @@
-export declare class DocumentService {
-    private document;
-    private _document;
-    constructor(platformId: any, document: any);
-    get nativeDocument(): Document;
-}

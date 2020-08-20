@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "build:stats": "ng build --prod --stats-json && webpack-bundle-analyzer dist/app-angular-lib/stats-es2015.json",
     "build:lib": "ng-packagr -p projects/my-zumo/ng-package.json; cp LICENSE dist/my-zumo/LICENSE; cp README.md dist/my-zumo/README.md",
-    "package": "cd dist/my-zumo && npm pack"
+    "package": "cd dist/app-angular-lib && npm pack"
   },
   "private": true,
   "dependencies": {

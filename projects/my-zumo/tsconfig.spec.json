@@ -8,7 +8,14 @@
     ]
   },
   "files": [
-    "src/test.ts"
+    "test.ts",
+    "../../src/polyfills.ts",
+    "./core/forms/public-api.ts",
+    "./core/pipes/public-api.ts",
+    "./core/directives/public-api.ts",
+    "./core/services/public-api.ts",
+    "./core/utils/public-api.ts",
+    "./core/public-api.ts"
   ],
   "include": [
     "**/*.spec.ts",
