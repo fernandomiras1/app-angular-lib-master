@@ -1,0 +1,23 @@
+import { DoCheck, EventEmitter } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+export declare const ChipsComponentType: {
+    RADIO: string;
+    CHECKBOX: string;
+};
+export declare class NGZContainerChipsComponent implements DoCheck, ControlValueAccessor {
+    listChips: any[];
+    defaultIndexSelected: any;
+    chipChecked: EventEmitter<any>;
+    set type(type: string);
+    isRadio: boolean;
+    multiple: boolean;
+    firstTime: boolean;
+    oldChip: any;
+    private propagateChange;
+    ngDoCheck(): void;
+    chipSelected(index: number): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState(isDisabled: boolean): void;
+    writeValue(obj: any): void;
+}

@@ -1,0 +1,19 @@
+import { EventEmitter, ElementRef, OnInit } from '@angular/core';
+export declare class NGZSliderControlComponent implements OnInit {
+    min: number;
+    max: number;
+    step: number;
+    prefix: string;
+    disabled: boolean;
+    title: string;
+    valuesChange: EventEmitter<number>;
+    range: ElementRef;
+    label: ElementRef;
+    posX: number;
+    posLineX: number;
+    valueRange: number;
+    private CIRCLE_WIDTH;
+    ngOnInit(): void;
+    inputEvent(value: number): void;
+    onMouseUp(value: number): void;
+}

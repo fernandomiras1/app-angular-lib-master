@@ -1,0 +1,22 @@
+import { EventEmitter } from '@angular/core';
+export declare const ComponentTypeButton: {
+    PRIMARY: string;
+    SECONDARY: string;
+    STICKY: string;
+    LINK: string;
+    HEADER: string;
+};
+export declare class NGZButtonComponent {
+    text: string;
+    disabled: boolean;
+    isLoading: boolean;
+    widthButton: string;
+    backgroundRipple: string;
+    clickButton: EventEmitter<any>;
+    typeButtonClass: string;
+    isBackground: boolean;
+    set type(type: string);
+    isClicked: boolean;
+    constructor();
+    onButtonClicked(): void;
+}

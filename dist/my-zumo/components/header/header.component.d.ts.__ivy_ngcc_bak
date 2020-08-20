@@ -1,0 +1,8 @@
+import { OnInit } from '@angular/core';
+export declare class NGZHeaderComponent implements OnInit {
+    title: string;
+    showHeader: boolean;
+    constructor();
+    ngOnInit(): void;
+    isShowHeader(event: boolean): void;
+}

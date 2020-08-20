@@ -1,0 +1,10 @@
+import { ElementRef, AfterViewChecked, EventEmitter } from '@angular/core';
+export declare class StickyHeaderDirective implements AfterViewChecked {
+    private element;
+    isShow: EventEmitter<any>;
+    private lastScrollTop;
+    private navHeight;
+    constructor(element: ElementRef);
+    ngAfterViewChecked(): void;
+    handleScroll(): void;
+}

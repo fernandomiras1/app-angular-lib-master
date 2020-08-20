@@ -1,0 +1,10 @@
+import { OnInit } from '@angular/core';
+export declare class NGZAccordionComponent implements OnInit {
+    isOpen: boolean;
+    title: string;
+    colorBackground: any;
+    isNotLine: boolean;
+    backgroundColor: string;
+    ngOnInit(): void;
+    onClick(): void;
+}

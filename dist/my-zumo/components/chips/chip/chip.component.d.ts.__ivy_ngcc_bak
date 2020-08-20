@@ -1,0 +1,14 @@
+import { EventEmitter } from '@angular/core';
+export declare class NGZChipComponent {
+    chip: {
+        id: number;
+        selected: boolean;
+        disabled: boolean;
+        text: string;
+    };
+    index: number;
+    isLast: boolean;
+    isRadio: boolean;
+    chipSelected: EventEmitter<number>;
+    checkChip(): void;
+}
