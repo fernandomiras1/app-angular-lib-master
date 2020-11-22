@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
-import { DocumentService } from '@zumo/core/services';
+import { DocumentService } from '@my-zumo/core/services';
 
 @Directive({
   selector: '[zHover]'

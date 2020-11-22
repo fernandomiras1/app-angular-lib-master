@@ -1,8 +1,7 @@
 /*
- * Public API Surface of my-zumo
+ * Public API Surface of core
  */
 
-// export * from './lib/src/components/button/index';
-// export * from './lib/src/my-zumo.module';
+export * from './base/index';
 
-export * from './lib/src/index';
+// las entradas secundarias ng-packager la calcula automáticamente.

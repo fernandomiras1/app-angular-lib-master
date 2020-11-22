@@ -2,9 +2,9 @@ import { ZRippleEffectDirective } from './ripple-effect.directive';
 import { Component, DebugElement, Renderer2 } from '@angular/core';
 import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { ZBrowser } from '@zumo/core/utils/src/lib/util/browser/browser';
-import { WindowService, DocumentService } from '@zumo/core/services';
-import { NGZButtonModule } from '@zumo/core/components/button/src/button.module';
+import { ZBrowser } from '@my-zumo/core/utils/src/lib/util/browser/browser';
+import { WindowService, DocumentService } from '@my-zumo/core/services';
+import { NGZButtonModule } from '@my-zumo/core/components/button/src/button.module';
 
 @Component({
   template: `<z-button type="text" zRippleEffect >

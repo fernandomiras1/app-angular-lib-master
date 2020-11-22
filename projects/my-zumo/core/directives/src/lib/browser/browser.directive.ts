@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Renderer2 } from '@angular/core';
-import { WindowService } from '@zumo/core/services';
-import { ZBrowser } from '@zumo/core/utils';
+import { WindowService } from '@my-zumo/core/services';
+import { ZBrowser } from '@my-zumo/core/utils';
 
 @Directive({
   selector: '[zBrowser]'

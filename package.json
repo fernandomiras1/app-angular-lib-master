@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:stats": "ng build --prod --stats-json && webpack-bundle-analyzer dist/app-angular-lib/stats-es2015.json",
-    "build:lib": "ng-packagr -p projects/my-zumo/ng-package.json; cp LICENSE dist/my-zumo/LICENSE; cp README.md dist/my-zumo/README.md",
+    "build:lib:build": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng build @my-zumo/core",
+    "pack": "cd dist/my-zumo/core && npm pack",
     "package": "cd dist/app-angular-lib && npm pack"
   },
   "private": true,
@@ -26,8 +27,7 @@
     "core-js": "^2.5.4",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "my-zumo": "dist/my-zumo/my-zumo-0.0.8.tgz"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",

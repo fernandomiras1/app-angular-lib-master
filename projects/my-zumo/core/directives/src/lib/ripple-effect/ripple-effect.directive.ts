@@ -1,6 +1,6 @@
 import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
-import { ZBrowser } from '@zumo/core/utils';
-import { DocumentService, WindowService } from '@zumo/core/services';
+import { ZBrowser } from '@my-zumo/core/utils';
+import { DocumentService, WindowService } from '@my-zumo/core/services';
 
 @Directive({
   selector: '[zRippleEffect]'

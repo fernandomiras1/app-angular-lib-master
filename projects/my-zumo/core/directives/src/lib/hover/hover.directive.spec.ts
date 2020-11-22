@@ -2,9 +2,9 @@ import { ZHoverDirective } from './hover.directive';
 import { Component, DebugElement, Renderer2 } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { ZUtilsModule } from '@zumo/core/utils/src/lib/utils.module';
-import { DocumentService } from '@zumo/core/services';
-import { ZDirectiveModule } from '@zumo/core/directives';
+import { ZUtilsModule } from '@my-zumo/core/utils/src/lib/utils.module';
+import { DocumentService } from '@my-zumo/core/services';
+import { ZDirectiveModule } from '@my-zumo/core/directives';
 
 @Component({
   template: `<div zHover style="height: 2px; width: 100px;">

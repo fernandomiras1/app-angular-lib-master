@@ -140,38 +140,43 @@
         }
       }
     },
-    "my-zumo": {
-      "root": "projects/my-zumo",
-      "sourceRoot": "projects/my-zumo/src",
+    "@my-zumo/core": {
+      "root": "projects/my-zumo/core",
+      "sourceRoot": "projects/my-zumo/core",
       "projectType": "library",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/my-zumo/tsconfig.lib.json",
-            "project": "projects/my-zumo/ng-package.json"
+            "tsConfig": "projects/my-zumo/core/tsconfig.lib.json",
+            "project": "projects/my-zumo/core/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/my-zumo/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-zumo/core/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/my-zumo/src/test.ts",
-            "tsConfig": "projects/my-zumo/tsconfig.spec.json",
-            "karmaConfig": "projects/my-zumo/karma.conf.js"
+            "main": "projects/my-zumo/core/test.ts",
+            "tsConfig": "projects/my-zumo/core/tsconfig.spec.json",
+            "karmaConfig": "projects/my-zumo/core/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/my-zumo/tsconfig.lib.json",
-              "projects/my-zumo/tsconfig.spec.json"
+              "projects/my-zumo/core/tsconfig.lib.json",
+              "projects/my-zumo/core/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

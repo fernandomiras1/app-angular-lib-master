@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/my-zumo",
+  "dest": "../../../dist/my-zumo/core",
   "lib": {
     "entryFile": "./public-api.ts",
     "styleIncludePaths": ["../../../public/styles"]

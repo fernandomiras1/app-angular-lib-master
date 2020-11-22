@@ -1,15 +1,11 @@
 import { Component, Input } from '@angular/core';
-export const ComponentType = {
-  PRIMARY: 'primary',
-  SECONDARY: 'secondary',
-  STICKY: 'sticky',
-  LINK: 'link',
-  HEADER: 'header'
+import { ComponentType } from '@my-zumo/core/utils';
+
+export const loadingTypeStyleMapping = {
+  [ComponentType.PRIMARY]: 'z-primary',
+  [ComponentType.SECONDARY]: 'z-secondary'
 };
 
-export const LoadingTypeStyleMapping = new Map<string, string>();
-LoadingTypeStyleMapping.set(ComponentType.PRIMARY, 'z-primary');
-LoadingTypeStyleMapping.set(ComponentType.SECONDARY, 'z-secondary');
 
 @Component({
   selector: 'lib-loading',
@@ -19,8 +15,8 @@ LoadingTypeStyleMapping.set(ComponentType.SECONDARY, 'z-secondary');
 export class NGZLoadingComponent {
   @Input() size = 'medium';
   @Input() set type(type: string) {
-    this.typeLoadingClass = LoadingTypeStyleMapping.get(type) || LoadingTypeStyleMapping.get('primary');
+    this.typeLoadingClass = loadingTypeStyleMapping[type] || loadingTypeStyleMapping[ComponentType.PRIMARY];
   }
-  typeLoadingClass = LoadingTypeStyleMapping.get('primary');
+  typeLoadingClass = loadingTypeStyleMapping[ComponentType.PRIMARY];
   @Input() withBg = false;
 }

@@ -2,7 +2,7 @@
 import { ZErrorFeedbackDirective } from './error-feedback.directive';
 import { FormControl, Validators } from '@angular/forms';
 import { ElementRef } from '@angular/core';
-import { CustomValidators } from '@zumo/core/forms/src/lib/custom-validators/custom-validators';
+import { CustomValidators } from '@my-zumo/core/forms/src/lib/custom-validators/custom-validators';
 
 describe('Directive: ErrorFeedbackDirective', () => {
 

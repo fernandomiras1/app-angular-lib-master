@@ -1,13 +1,15 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { LoadingTypeStyleMapping } from '../loading/loading.component';
-import { ComponentType } from '../../utils/enums/component-type.const';
+import { loadingTypeStyleMapping } from '@my-zumo/core/components/loading';
+import { ComponentType } from '@my-zumo/core/utils';
 
-const ButtonTypeStyleMapping = new Map<string, string>();
-ButtonTypeStyleMapping.set(ComponentType.PRIMARY, 'z-btn-primary');
-ButtonTypeStyleMapping.set(ComponentType.SECONDARY, 'z-btn-secondary');
-ButtonTypeStyleMapping.set(ComponentType.STICKY, 'z-btn-sticky');
-ButtonTypeStyleMapping.set(ComponentType.LINK, 'z-btn-link');
-ButtonTypeStyleMapping.set(ComponentType.HEADER, 'z-btn-header');
+const buttonTypeStyleMapping = {
+  [ComponentType.PRIMARY]: 'z-btn-primary',
+  [ComponentType.SECONDARY]: 'z-btn-secondary',
+  [ComponentType.STICKY]: 'z-btn-sticky',
+  [ComponentType.LINK]: 'z-btn-link',
+  [ComponentType.HEADER]: 'z-btn-header'
+};
+
 
 @Component({
   selector: 'lib-button',
@@ -22,46 +24,46 @@ export class NGZButtonComponent {
   backgroundRipple = 'rgba(255, 255, 255, 0.32)';
   @Output() clickButton = new EventEmitter();
 
-  typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.PRIMARY);
-  typeLoadingClass = LoadingTypeStyleMapping.get(ComponentType.PRIMARY);
+  typeButtonClass = buttonTypeStyleMapping[ComponentType.PRIMARY];
+  typeLoadingClass = loadingTypeStyleMapping[ComponentType.PRIMARY];
 
   public isBackground = true;
   @Input()
   set type(type: string) {
     switch (type) {
       case ComponentType.PRIMARY: {
-        this.typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.PRIMARY);
+        this.typeButtonClass = buttonTypeStyleMapping[ComponentType.PRIMARY];
         this.typeLoadingClass = ComponentType.PRIMARY;
         this.backgroundRipple = 'rgba(255, 255, 255, 0.32)';
         break;
       }
       case ComponentType.SECONDARY: {
         this.isBackground = false;
-        this.typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.SECONDARY);
+        this.typeButtonClass = buttonTypeStyleMapping[ComponentType.SECONDARY];
         this.typeLoadingClass = ComponentType.SECONDARY;
         this.backgroundRipple = 'rgba(255, 102, 0, 0.32)';
         break;
       }
       case ComponentType.STICKY: {
         this.isBackground = true;
-        this.typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.STICKY);
+        this.typeButtonClass = buttonTypeStyleMapping[ComponentType.STICKY];
         this.backgroundRipple = 'rgba(255, 255, 255, 0.32)';
         break;
       }
       case ComponentType.LINK: {
         this.isBackground = false;
-        this.typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.LINK);
+        this.typeButtonClass = buttonTypeStyleMapping[ComponentType.LINK];
         this.backgroundRipple = 'rgba(255, 102, 0, 0.32)';
         break;
       }
       case ComponentType.HEADER: {
         this.isBackground = false;
-        this.typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.HEADER);
+        this.typeButtonClass = buttonTypeStyleMapping[ComponentType.HEADER];
         this.backgroundRipple = 'rgba(255, 255, 255, 0.32)';
         break;
       }
       default: {
-        this.typeButtonClass = ButtonTypeStyleMapping.get(ComponentType.PRIMARY);
+        this.typeButtonClass = buttonTypeStyleMapping[ComponentType.PRIMARY];
         this.typeLoadingClass = ComponentType.PRIMARY;
         this.backgroundRipple = 'rgba(255, 255, 255, 0.32)';
       }

@@ -1,4 +1,4 @@
-import { WindowService } from '@zumo/core/services';
+import { WindowService } from '@my-zumo/core/services';
 
 export class ZBrowser {
   constructor(

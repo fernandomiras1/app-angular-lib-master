@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyZumoModule } from 'my-zumo';
+
+import { NGZButtonModule } from '@my-zumo/core/components/button';
+import { NGZHeaderModule } from '@my-zumo/core/components/header';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
@@ -13,9 +16,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    MyZumoModule
+    NGZButtonModule,
+    NGZHeaderModule
   ],
-  exports: [ MyZumoModule],
+  exports: [ 
+    NGZButtonModule,
+    NGZHeaderModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
