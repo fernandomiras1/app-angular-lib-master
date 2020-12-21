@@ -27,7 +27,7 @@
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2",
-    "my-zumo": "dist/my-zumo/my-zumo-0.0.8.tgz"
+    "my-zumo": "0.0.8"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",

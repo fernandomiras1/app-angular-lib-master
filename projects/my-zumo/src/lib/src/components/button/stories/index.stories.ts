@@ -1,6 +1,6 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { action } from '@storybook/addon-actions';
-import { NGZButtonComponent } from '../button.component';
+import { MYButtonComponent } from '../button.component';
 import { NGZLoadingModule } from '../../loading/loading.module';
 
 
@@ -8,18 +8,18 @@ storiesOf('Button', module)
   .addDecorator(
     moduleMetadata({
       imports: [NGZLoadingModule],
-      declarations: [NGZButtonComponent]
+      declarations: [MYButtonComponent]
     })
   )
   .add('with text', () => ({
-    component: NGZButtonComponent,
+    component: MYButtonComponent,
     props: {
       text: 'Hello Button',
       type: 'secondary'
     }
   }))
   .add('with some emoji', () => ({
-      component: NGZButtonComponent,
+      component: MYButtonComponent,
       props: {
         text: '😀 😎 👍 💯'
       }
@@ -29,7 +29,7 @@ storiesOf('Button', module)
   .add(
     'with some emoji and action',
     () => ({
-      component: NGZButtonComponent,
+      component: MYButtonComponent,
       props: {
         text: '😀 😎 👍 💯',
         onClick: action('This was clicked OMG')

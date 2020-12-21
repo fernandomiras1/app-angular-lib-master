@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class NGZHeaderComponent implements OnInit {
+export class MYHeaderComponent implements OnInit {
 @Input() title = 'Angular';
 public showHeader = true;
 constructor() { }

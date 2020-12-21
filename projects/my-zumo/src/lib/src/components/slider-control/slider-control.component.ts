@@ -14,7 +14,7 @@ import { Component,
   providers: []
 })
 
-export class NGZSliderControlComponent implements OnInit {
+export class MYSliderControlComponent implements OnInit {
 
   @Input() min: number;
   @Input() max: number;

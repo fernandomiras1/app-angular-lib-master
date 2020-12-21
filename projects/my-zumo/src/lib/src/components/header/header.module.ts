@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NGZHeaderComponent } from './header.component';
+import { MYHeaderComponent } from './header.component';
 import { ZDirectiveModule } from '../../utils/directives/directives.module';
 
 @NgModule({
@@ -9,10 +9,10 @@ import { ZDirectiveModule } from '../../utils/directives/directives.module';
     ZDirectiveModule
   ],
   declarations: [
-    NGZHeaderComponent
+    MYHeaderComponent
   ],
   exports: [
-    NGZHeaderComponent
+    MYHeaderComponent
   ]
 })
 export class NGZHeaderModule {}

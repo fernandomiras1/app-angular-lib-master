@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NGZButtonComponent } from './button.component';
+import { MYButtonComponent } from './button.component';
 import { NGZLoadingModule } from '../loading/loading.module';
 @NgModule({
   imports: [
@@ -8,10 +8,10 @@ import { NGZLoadingModule } from '../loading/loading.module';
     NGZLoadingModule
   ],
   declarations: [
-    NGZButtonComponent
+    MYButtonComponent
   ],
   exports: [
-    NGZButtonComponent
+    MYButtonComponent
   ]
 })
 export class NGZButtonModule {}

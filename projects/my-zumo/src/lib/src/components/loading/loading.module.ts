@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NGZLoadingComponent } from './loading.component';
+import { MYLoadingComponent } from './loading.component';
 
 @NgModule({
   declarations: [
-    NGZLoadingComponent
+    MYLoadingComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    NGZLoadingComponent
+    MYLoadingComponent
   ]
 })
 export class NGZLoadingModule {}

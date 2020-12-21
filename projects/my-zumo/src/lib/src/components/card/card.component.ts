@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class NGZCardComponent implements OnInit {
+export class MYCardComponent implements OnInit {
 
   @Input() text = 'text';
   constructor() { }

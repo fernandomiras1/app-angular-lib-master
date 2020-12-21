@@ -11,11 +11,11 @@ export const ChipsComponentType = {
   styleUrls: ['./chips.component.scss'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => NGZContainerChipsComponent),
+    useExisting: forwardRef(() => MYContainerChipsComponent),
     multi: true
   }]
 })
-export class NGZContainerChipsComponent implements DoCheck, ControlValueAccessor {
+export class MYContainerChipsComponent implements DoCheck, ControlValueAccessor {
   @Input() listChips: any[] = [];
   @Input() defaultIndexSelected;
   @Output() chipChecked: EventEmitter<any> = new EventEmitter<any>();

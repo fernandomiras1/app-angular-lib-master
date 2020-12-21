@@ -1,24 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { NGZContainerChipsComponent, ChipsComponentType } from './chips.component';
+import { MYContainerChipsComponent, ChipsComponentType } from './chips.component';
 import { NGZChipComponent } from './chip/chip.component';
 import { ZRippleEffectDirective } from '../../utils/directives/ripple-effect/ripple-effect.directive';
 
 describe('ChipsComponent', () => {
-  let component: NGZContainerChipsComponent;
-  let fixture: ComponentFixture<NGZContainerChipsComponent>;
+  let component: MYContainerChipsComponent;
+  let fixture: ComponentFixture<MYContainerChipsComponent>;
   const list = [{ id: 1, disabled: false, selected: false, text: 'Plan z' },
     { id: 2, disabled: true, selected: false, text: 'Chip 312312311' },
     { id: 3, disabled: false, selected: true, text: 'Chip 312311' }];
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NGZContainerChipsComponent, NGZChipComponent, ZRippleEffectDirective]
+      declarations: [MYContainerChipsComponent, NGZChipComponent, ZRippleEffectDirective]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NGZContainerChipsComponent);
+    fixture = TestBed.createComponent(MYContainerChipsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

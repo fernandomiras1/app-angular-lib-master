@@ -1,35 +1,35 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 
-import { NGZLoadingComponent } from '../loading.component';
+import { MYLoadingComponent } from '../loading.component';
 
 
 storiesOf('Spinner', module)
   .addDecorator(
     moduleMetadata({
-      declarations: [NGZLoadingComponent]
+      declarations: [MYLoadingComponent]
     })
   )
   .add('primary', () => ({
-    component: NGZLoadingComponent,
+    component: MYLoadingComponent,
     props: {
       type: 'primary'
     }
   }))
   .add('secondary', () => ({
-    component: NGZLoadingComponent,
+    component: MYLoadingComponent,
     props: {
       type: 'secondary'
     }
   }))
   .add('large', () => ({
-    component: NGZLoadingComponent,
+    component: MYLoadingComponent,
     props: {
       type: 'primary',
       size: 'large'
     }
   }))
   .add('extra-large', () => ({
-    component: NGZLoadingComponent,
+    component: MYLoadingComponent,
     props: {
       type: 'primary',
       size: 'extra-large'

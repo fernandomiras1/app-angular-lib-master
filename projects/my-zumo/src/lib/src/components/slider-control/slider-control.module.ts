@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NGZSliderControlComponent } from './slider-control.component';
+import { MYSliderControlComponent } from './slider-control.component';
 
 @NgModule({
   declarations: [
-    NGZSliderControlComponent
+    MYSliderControlComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    NGZSliderControlComponent
+    MYSliderControlComponent
   ]
 })
 export class NGZSliderControlModule {}

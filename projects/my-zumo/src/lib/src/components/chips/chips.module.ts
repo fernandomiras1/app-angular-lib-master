@@ -1,18 +1,18 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NGZContainerChipsComponent } from './chips.component';
+import { MYContainerChipsComponent } from './chips.component';
 import { NGZChipComponent } from './chip/chip.component';
 
 @NgModule({
   declarations: [
-    NGZContainerChipsComponent,
+    MYContainerChipsComponent,
     NGZChipComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    NGZContainerChipsComponent,
+    MYContainerChipsComponent,
     NGZChipComponent
   ]
 })

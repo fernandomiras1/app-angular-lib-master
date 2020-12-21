@@ -14,7 +14,7 @@ ButtonTypeStyleMapping.set(ComponentType.HEADER, 'z-btn-header');
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class NGZButtonComponent {
+export class MYButtonComponent {
   @Input() text: string;
   @Input() disabled = false;
   @Input() isLoading = false;

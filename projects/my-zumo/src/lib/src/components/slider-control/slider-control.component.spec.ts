@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NGZSliderControlComponent } from './slider-control.component';
+import { MYSliderControlComponent } from './slider-control.component';
 import { EventEmitter } from '@angular/core';
 
 describe('SliderControlComponent', () => {
-  let component: NGZSliderControlComponent;
-  let fixture: ComponentFixture<NGZSliderControlComponent>;
+  let component: MYSliderControlComponent;
+  let fixture: ComponentFixture<MYSliderControlComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NGZSliderControlComponent]
+      declarations: [MYSliderControlComponent]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NGZSliderControlComponent);
+    fixture = TestBed.createComponent(MYSliderControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

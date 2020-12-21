@@ -16,7 +16,7 @@ LoadingTypeStyleMapping.set(ComponentType.SECONDARY, 'z-secondary');
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss']
 })
-export class NGZLoadingComponent {
+export class MYLoadingComponent {
   @Input() size = 'medium';
   @Input() set type(type: string) {
     this.typeLoadingClass = LoadingTypeStyleMapping.get(type) || LoadingTypeStyleMapping.get('primary');
